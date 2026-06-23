@@ -28,7 +28,7 @@ func main() {
 	fmt.Println("Start the pointlessness!!!\n\n", len(quiz))
 
 	for i, q := range quiz {
-		fmt.Println("Question %d: %s\n", i+1, q.Text)
+		fmt.Printf("Question %d: %s\n", i+1, q.Text)
 		fmt.Println("Answer: ")
 
 		input, err := reader.ReadString('\n')
