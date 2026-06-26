@@ -5,12 +5,15 @@ import (
 	"bufio"
 	"strings"
 	"os"
+	sql "database/sql"
 )
 
 type Question struct {
 	Text string
 	Answer string
 }
+
+var db *sql.DB
 
 func main() {
 	fmt.Println("Which album was the song from?")
@@ -48,4 +51,9 @@ func main() {
        fmt.Printf("Quiz is over. Final Score: %d out of %d\n", score, len(quiz))
        percent := (float64(score) / float64(len(quiz))) * 100
        fmt.Printf("Success Rate: %.1f%%\n", percent)
+       getQuestion()
+}
+
+func getQuestion() {
+	fmt.Println("First Question")
 }
